@@ -9,7 +9,7 @@ std::string MenuApp::pedirDatoValidado(const std::string& mensaje, bool (*funcVa
         std::cout << mensaje;
         std::getline(std::cin, entrada);
         if (!funcValidacion(entrada)) {
-            std::cout << "[ERROR] Entrada inválida. Por favor, reintente.\n";
+            std::cout << "[ERROR] Entrada invalida. Por favor, reintente.\n";
         }
     } while (!funcValidacion(entrada));
     return entrada;
