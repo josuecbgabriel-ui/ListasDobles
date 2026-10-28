@@ -47,7 +47,7 @@ void ListaDoble::mostrarLista() const {
     Nodo* actual = cabeza;
     std::cout << "\n================= LISTA DE REGISTROS =================" << std::endl;
     while (actual != nullptr) {
-        std::cout << "Cédula:    " << actual->persona.getCedula() << std::endl;
+        std::cout << "Cedula:    " << actual->persona.getCedula() << std::endl;
         std::cout << "Nombres:   " << actual->persona.getNombres() << std::endl;
         std::cout << "Apellidos: " << actual->persona.getApellidos() << std::endl;
         std::cout << "Correo:    " << actual->persona.getCorreo() << std::endl;
@@ -65,7 +65,7 @@ void ListaDoble::guardarEnArchivo(const std::string& nombreArchivo) const {
 
     Nodo* actual = cabeza;
     while (actual != nullptr) {
-        archivo << "Cédula   " << actual->persona.getCedula() << "\n";
+        archivo << "Cedula   " << actual->persona.getCedula() << "\n";
         archivo << "Nombres: " << actual->persona.getNombres() << "\n";
         archivo << "Apellidos: " << actual->persona.getApellidos() << "\n";
         archivo << "Correo: " << actual->persona.getCorreo() << "\n";
