@@ -1,0 +1,10 @@
+Cédula   1753798626
+Nombres: Josue 
+Apellidos: Carvajal Benitez
+Correo: j_carvajal1@espe.edu.ec
+-------------------------------------------
+Cédula   1712767118
+Nombres: Jeremy
+Apellidos: Carvajal Benitez
+Correo: j_carvajal2@espe.edu.ec
+-------------------------------------------
