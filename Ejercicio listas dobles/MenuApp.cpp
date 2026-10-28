@@ -18,18 +18,18 @@ std::string MenuApp::pedirDatoValidado(const std::string& mensaje, bool (*funcVa
 void MenuApp::ejecutar() {
     int opcion = 0;
     do {
-        std::cout << "\n================ MENÚ PRINCIPAL ================\n";
+        std::cout << "\n================ MENU PRINCIPAL ================\n";
         std::cout << "1. Agregar Estudiante\n";
         std::cout << "2. Mostrar Estudiantes\n";
         std::cout << "3. Guardar en Archivo .TXT\n";
         std::cout << "4. Salir\n";
-        std::cout << "Seleccione una opción: ";
+        std::cout << "Seleccione una opcion: ";
         std::cin >> opcion;
         std::cin.ignore();
 
         switch (opcion) {
         case 1: {
-            std::string cedula = pedirDatoValidado("Ingrese Cédula: ", Validador::esCedulaValida);
+            std::string cedula = pedirDatoValidado("Ingrese Cedula: ", Validador::esCedulaValida);
             std::string nombres = pedirDatoValidado("Ingrese Nombres: ", Validador::esTextoValido);
             std::string apellidos = pedirDatoValidado("Ingrese Apellidos: ", Validador::esTextoValido);
 
@@ -38,7 +38,7 @@ void MenuApp::ejecutar() {
             Persona nuevaPersona(cedula, nombres, apellidos, correoGenerado);
             lista.insertarFinal(nuevaPersona);
 
-            std::cout << "\n[ÉXITO] Estudiante registrado exitosamente!" << std::endl;
+            std::cout << "\n[EXITO] Estudiante registrado exitosamente!" << std::endl;
             std::cout << "Correo Asignado: " << correoGenerado << std::endl;
             break;
         }
