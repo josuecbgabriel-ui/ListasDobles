@@ -71,6 +71,17 @@ void ListaDoble::mostrarLista() const {
     }
 }
 
+bool ListaDoble::existeCedula(const std::string& cedula) const {
+    Nodo* actual = cabeza;
+    while (actual != nullptr) {
+        if (actual->persona.getCedula() == cedula) {
+            return true; // La cedula ya esta registrada
+        }
+        actual = actual->siguiente;
+    }
+    return false; // La cedula no existe en la lista
+}
+
 void ListaDoble::guardarEnArchivo(const std::string& nombreArchivo) const {
     std::ofstream archivo(nombreArchivo);
     if (!archivo.is_open()) {
