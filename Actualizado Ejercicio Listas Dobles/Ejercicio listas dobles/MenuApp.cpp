@@ -29,7 +29,23 @@ void MenuApp::ejecutar() {
 
         switch (opcion) {
         case 1: {
-            std::string cedula = pedirDatoValidado("Ingrese Cedula (10 digitos): ", Validador::esCedulaValida);
+            std::string cedula;
+            bool cedulaValidaYNueva = false;
+            
+            // Valida formato de 10 digitos y que no este registrada previamente
+            do {
+                std::cout << "Ingrese Cedula (10 digitos): ";
+                std::getline(std::cin, cedula);
+                
+                if (!Validador::esCedulaValida(cedula)) {
+                    std::cout << "[ERROR] Entrada invalida. Por favor, reintente.\n";
+                } else if (lista.existeCedula(cedula)) {
+                    std::cout << "[ERROR] Esta cedula ya esta registrada. Ingrese otra.\n";
+                } else {
+                    cedulaValidaYNueva = true;
+                }
+            } while (!cedulaValidaYNueva);
+
             std::string nombres = pedirDatoValidado("Ingrese Nombres : ", Validador::esNombresValido);
             std::string apellidos = pedirDatoValidado("Ingrese Apellidos : ", Validador::esApellidosValido);
 
